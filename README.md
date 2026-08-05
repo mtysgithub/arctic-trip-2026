@@ -10,9 +10,21 @@
 
 https://mtysgithub.github.io/arctic-trip-2026/
 
+## 共享任务板
+
+https://github.com/mtysgithub/arctic-trip-2026/issues
+
+网站会实时读取以 `[P0]`、`[P1]`、`[P2]` 开头的 GitHub Issues：
+
+- 在 Issue 内勾选子事项并记录非敏感信息；
+- 整项完成后关闭 Issue；
+- 刷新网站即可看到共同完成进度；
+- 不要在公开仓库上传护照、签证页、保单号、电话号码等敏感信息。
+
 ## 项目结构
 
-- `index.html`：完整静态网站
-- `.github/workflows/deploy-pages.yml`：GitHub Pages 自动部署
+- `index.html`：路线、风险、时间优先级与动态任务板
+- `.github/workflows/publish.yml`：将 `main` 自动发布到 `gh-pages`
+- `gh-pages`：GitHub Pages 的发布分支
 
-每次修改并提交到 `main` 分支后，GitHub Actions 会自动重新部署网站。
+每次修改并提交到 `main` 后，GitHub Actions 会自动更新线上网站。
