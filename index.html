@@ -3,158 +3,122 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>北纬78°｜2026 北极之旅 V2</title>
-<meta name="description" content="2026.9.25–10.6，两位成年男性：奥斯陆、斯瓦尔巴、特罗姆瑟与塞尼亚的北极旅行计划。">
+<title>北纬 78°｜2026 北极之旅</title>
+<meta name="description" content="2026年9月25日至10月6日，两位成年男性的奥斯陆、斯瓦尔巴、特罗姆瑟与塞尼亚旅行执行方案、风险控制和共享任务板。">
 <style>
 :root{
   --bg:#071018;--panel:#0c1923;--panel2:#102433;--text:#eef7f7;--muted:#9fb7be;
   --line:rgba(255,255,255,.11);--accent:#78f6cc;--accent2:#8cbcff;--warn:#ffd58a;
+  --danger:#ff9c9c;--ok:#83e6a1;
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
-a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(7,16,24,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.05em}
-nav .links{display:flex;gap:18px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
+a{color:inherit}.wrap{width:min(1140px,calc(100% - 36px));margin:auto}
+nav{position:sticky;top:0;z-index:30;background:rgba(7,16,24,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;letter-spacing:.04em}
+nav .links{display:flex;gap:17px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
 .hero{min-height:720px;position:relative;overflow:hidden;display:flex;align-items:center;border-bottom:1px solid var(--line)}
-.aurora{position:absolute;inset:-30%;background:
-radial-gradient(ellipse at 65% 20%,rgba(72,255,181,.38),transparent 28%),
-radial-gradient(ellipse at 25% 5%,rgba(89,141,255,.32),transparent 30%),
-conic-gradient(from 210deg at 45% 10%,transparent,rgba(112,255,210,.32),transparent 30%);
-filter:blur(34px);animation:drift 12s ease-in-out infinite alternate}
+.aurora{position:absolute;inset:-30%;background:radial-gradient(ellipse at 65% 20%,rgba(72,255,181,.38),transparent 28%),radial-gradient(ellipse at 25% 5%,rgba(89,141,255,.32),transparent 30%),conic-gradient(from 210deg at 45% 10%,transparent,rgba(112,255,210,.32),transparent 30%);filter:blur(34px);animation:drift 12s ease-in-out infinite alternate}
 @keyframes drift{to{transform:translate3d(5%,-2%,0) rotate(5deg)}}
 .mountains,.mountains:before,.mountains:after{position:absolute;left:-8%;right:-8%;bottom:-2px;height:48%;clip-path:polygon(0 100%,0 68%,12% 52%,22% 68%,36% 29%,49% 66%,62% 19%,75% 67%,88% 38%,100% 65%,100% 100%);background:#0c1b26}
 .mountains:before{content:"";left:0;right:0;bottom:0;height:85%;background:#102836;opacity:.8;transform:translateY(23%) scale(1.08)}
 .mountains:after{content:"";left:0;right:0;bottom:0;height:70%;background:#071018;transform:translateY(48%) scale(1.15)}
-.hero-content{position:relative;z-index:3;padding:110px 0 180px;max-width:820px}
-.kicker{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(120,246,204,.35);background:rgba(120,246,204,.08);padding:8px 13px;border-radius:999px;color:var(--accent);font-size:13px}
-h1{font-size:clamp(48px,8vw,94px);line-height:.98;margin:24px 0 22px;letter-spacing:-.055em}
-.hero p{font-size:clamp(18px,2.2vw,25px);color:#c8dadd;max-width:720px}
-.route-line{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700}.route-line span{padding:9px 12px;border-radius:9px;background:rgba(255,255,255,.08)}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;background:var(--accent);color:#03231b}.btn.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
-section{padding:82px 0;border-bottom:1px solid var(--line)}.eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-h2{font-size:clamp(31px,4vw,50px);line-height:1.12;margin:10px 0 24px;letter-spacing:-.035em}
-.lead{font-size:19px;color:#c0d2d7;max-width:820px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:34px}
-.card{grid-column:span 4;padding:24px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,36,51,.9),rgba(8,22,31,.9));border-radius:18px}
-.card.wide{grid-column:span 6}.card h3{margin:0 0 10px;font-size:20px}.card p{margin:0;color:var(--muted)}
-.stat{font-size:34px;font-weight:800;color:var(--accent);display:block;line-height:1.2;margin-bottom:7px}
-.timeline{margin-top:36px;display:grid;gap:14px}.day{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
-.date{font-weight:800;color:var(--accent)}.day h3{margin:0 0 6px}.day p{margin:0;color:var(--muted)}.tag{display:inline-block;font-size:12px;margin-top:10px;padding:4px 8px;border-radius:7px;background:rgba(140,188,255,.12);color:#bcd5ff}
-.table{overflow:auto;border:1px solid var(--line);border-radius:16px;margin-top:30px}table{width:100%;border-collapse:collapse;min-width:700px}th,td{padding:15px 17px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:13px;background:rgba(255,255,255,.035)}tr:last-child td{border-bottom:0}.total td{font-weight:800;color:var(--accent);font-size:18px}
-.notice{padding:22px;border-left:4px solid var(--warn);background:rgba(255,213,138,.07);border-radius:4px 14px 14px 4px;margin:28px 0}.notice strong{color:var(--warn)}
-.links-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}.link-card{padding:17px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:rgba(255,255,255,.025)}.link-card:hover{border-color:rgba(120,246,204,.6)}.link-card small{display:block;color:var(--muted)}
-.checklist{columns:2;column-gap:40px}.check{break-inside:avoid;padding:9px 0;color:#c6d7db}.check:before{content:"□";color:var(--accent);margin-right:10px}
-footer{padding:50px 0 70px;color:var(--muted);font-size:14px}
-@media(max-width:760px){nav .links{display:none}.hero{min-height:650px}.card,.card.wide{grid-column:span 12}.day{grid-template-columns:1fr;gap:7px}.links-list{grid-template-columns:1fr}.checklist{columns:1}}
-@media print{nav,.aurora,.mountains,.cta{display:none}.hero{min-height:auto}.hero-content{padding:40px 0}body{background:white;color:#111}.card,.day,.table{background:white;border-color:#bbb}.lead,.day p,.card p,footer{color:#444}section{padding:35px 0}}
+.hero-content{position:relative;z-index:3;padding:105px 0 175px;max-width:880px}.kicker{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(120,246,204,.35);background:rgba(120,246,204,.08);padding:8px 13px;border-radius:999px;color:var(--accent);font-size:13px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.98;margin:24px 0 22px;letter-spacing:-.055em}.hero p{font-size:clamp(18px,2.15vw,24px);color:#c8dadd;max-width:760px}
+.route-line{margin-top:31px;display:flex;flex-wrap:wrap;gap:9px;align-items:center;font-weight:750}.route-line span{padding:9px 12px;border-radius:9px;background:rgba(255,255,255,.08)}
+.metrics{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.metric{min-width:155px;padding:14px 16px;border:1px solid var(--line);background:rgba(8,24,33,.62);border-radius:13px}.metric b{display:block;font-size:24px;color:var(--accent);line-height:1.2}.metric small{color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:750;background:var(--accent);color:#03231b}.btn.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{padding:78px 0;border-bottom:1px solid var(--line)}.eyebrow{color:var(--accent);font-size:13px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}h2{font-size:clamp(31px,4vw,49px);line-height:1.12;margin:10px 0 22px;letter-spacing:-.035em}.lead{font-size:19px;color:#c0d2d7;max-width:850px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:32px}.card{grid-column:span 4;padding:24px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,36,51,.9),rgba(8,22,31,.9));border-radius:18px}.card.wide{grid-column:span 6}.card.full{grid-column:span 12}.card h3{margin:0 0 10px;font-size:20px}.card p{margin:0;color:var(--muted)}.stat{font-size:34px;font-weight:850;color:var(--accent);display:block;line-height:1.2;margin-bottom:7px}.mini{font-size:13px;color:var(--muted)}
+.timeline{margin-top:34px;display:grid;gap:13px}.day{display:grid;grid-template-columns:145px 1fr;gap:22px;padding:21px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.date{font-weight:850;color:var(--accent)}.day h3{margin:0 0 5px}.day p{margin:0;color:var(--muted)}.tag{display:inline-block;font-size:12px;margin-top:10px;padding:4px 8px;border-radius:7px;background:rgba(140,188,255,.12);color:#bcd5ff}.tag.critical{background:rgba(255,156,156,.12);color:#ffc2c2}
+.risk-list{display:grid;gap:13px;margin-top:31px}.risk{display:grid;grid-template-columns:105px 1.25fr 1.6fr;gap:18px;padding:19px 21px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.risk-level{font-weight:850}.risk-level.high{color:var(--danger)}.risk-level.mid{color:var(--warn)}.risk b{display:block;margin-bottom:3px}.risk p{margin:0;color:var(--muted)}
+.priority-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:31px}.priority{padding:23px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}.priority h3{margin:0 0 12px}.priority ul{padding-left:19px;margin:0}.priority li{margin:8px 0;color:#c6d7db}.priority.now{border-color:rgba(255,156,156,.4)}.priority.next{border-color:rgba(255,213,138,.35)}.priority.later{border-color:rgba(120,246,204,.3)}
+.notice{padding:21px;border-left:4px solid var(--warn);background:rgba(255,213,138,.07);border-radius:4px 14px 14px 4px;margin:27px 0}.notice strong{color:var(--warn)}
+.board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}.progress-box{min-width:245px}.progress-line{height:9px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:7px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width .35s}.board{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:29px}.column{padding:16px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.02)}.column h3{margin:2px 4px 13px}.task-list{display:grid;gap:10px}.task{display:block;padding:15px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:rgba(12,25,35,.88)}.task:hover{border-color:rgba(120,246,204,.55)}.task.done{opacity:.58}.task-title{font-weight:750;line-height:1.45}.task-meta{display:flex;justify-content:space-between;gap:10px;margin-top:9px;color:var(--muted);font-size:12px}.state{font-weight:750}.state.open{color:var(--warn)}.state.closed{color:var(--ok)}.loading{padding:16px;color:var(--muted)}
+.table{overflow:auto;border:1px solid var(--line);border-radius:16px;margin-top:28px}table{width:100%;border-collapse:collapse;min-width:690px}th,td{padding:14px 17px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:13px;background:rgba(255,255,255,.035)}tr:last-child td{border-bottom:0}.total td{font-weight:850;color:var(--accent);font-size:18px}
+.links-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.link-card{padding:17px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:rgba(255,255,255,.025)}.link-card:hover{border-color:rgba(120,246,204,.6)}.link-card small{display:block;color:var(--muted)}footer{padding:46px 0 68px;color:var(--muted);font-size:14px}
+@media(max-width:820px){nav .links{display:none}.hero{min-height:680px}.card,.card.wide{grid-column:span 12}.priority-grid,.board{grid-template-columns:1fr}.risk{grid-template-columns:1fr;gap:8px}.day{grid-template-columns:1fr;gap:7px}.links-list{grid-template-columns:1fr}}
+@media print{nav,.aurora,.mountains,.cta,.board-note{display:none}.hero{min-height:auto}.hero-content{padding:40px 0}body{background:white;color:#111}.card,.day,.risk,.priority,.table,.column{background:white;border-color:#bbb}.lead,.day p,.card p,.risk p,footer{color:#444}section{padding:34px 0}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><div class="brand">N 78° · ARCTIC 2026</div><div class="links">
-<a href="#route">路线</a><a href="#days">逐日</a><a href="#budget">预算</a><a href="#visa">签证</a><a href="#book">预订</a>
-</div></div></nav>
-
-<header class="hero">
-<div class="aurora"></div><div class="mountains"></div>
-<div class="wrap hero-content">
-<div class="kicker">V2 · 两位成年男性 · 2026.09.25—10.06</div>
-<h1>把时间留给<br>真正的北极</h1>
-<p>取消赫尔辛基与芬兰拉普兰绕行。新版以斯瓦尔巴为核心、北挪威海岸为第二主线，在 12 天内兼顾北纬 78°、冰川荒原、极光与塞尼亚峡湾。</p>
-<div class="route-line"><span>中国</span>→<span>奥斯陆</span>→<span>朗伊尔城</span>→<span>特罗姆瑟</span>→<span>塞尼亚</span>→<span>奥斯陆</span></div>
-<div class="cta"><a class="btn" href="#days">查看逐日行程</a><a class="btn alt" href="#book">进入预订清单</a></div>
-</div>
-</header>
-
+<nav><div class="wrap"><div class="brand">N 78° · ARCTIC 2026</div><div class="links"><a href="#focus">路线重点</a><a href="#days">行程</a><a href="#risks">风险</a><a href="#priority">优先事项</a><a href="#board">任务板</a><a href="#budget">预算</a></div></div></nav>
+<header class="hero"><div class="aurora"></div><div class="mountains"></div><div class="wrap hero-content">
+<div class="kicker">两位成年男性 · 2026.09.25—10.06</div>
+<h1>北纬 78°<br>北极之旅</h1>
+<p>以斯瓦尔巴为核心、特罗姆瑟与塞尼亚为北挪威延伸。路线的首要目标不是多去城市，而是在有限时间里获得高北极荒原、峡湾、极光和海岸山地四种核心体验，同时保留天气与航班容错。</p>
+<div class="route-line"><span>中国</span>→<span>奥斯陆</span>→<span>朗伊尔城</span>→<span>特罗姆瑟</span>→<span>塞尼亚</span>→<span>奥斯陆</span>→<span>中国</span></div>
+<div class="metrics"><div class="metric"><b id="countdown">50 天</b><small>距离出发</small></div><div class="metric"><b>5 晚</b><small>斯瓦尔巴核心段</small></div><div class="metric"><b id="taskMetric">0 / 9</b><small>关键任务已完成</small></div></div>
+<div class="cta"><a class="btn" href="#priority">现在先做什么</a><a class="btn alt" href="#board">打开共享任务板</a></div>
+</div></header>
 <main>
-<section id="route"><div class="wrap">
-<div class="eyebrow">Why this route</div><h2>新版路线为什么更合理</h2>
-<p class="lead">这次不再把“北欧城市数量”当作价值，而以景观密度、天气容错和交通损耗为优化目标。奥斯陆只承担入境与航班缓冲，旅行主体全部放在北极圈以北。</p>
-<div class="grid">
-<div class="card"><span class="stat">5 晚</span><h3>斯瓦尔巴</h3><p>保证至少三个完整活动日，并给海况和天气留出机动日。</p></div>
-<div class="card"><span class="stat">4 晚</span><h3>北挪威</h3><p>特罗姆瑟作为交通与极光基地，塞尼亚提供高密度海岸山地景观。</p></div>
-<div class="card"><span class="stat">1 晚</span><h3>奥斯陆</h3><p>只做长途飞行缓冲，不消耗北极主体时间。</p></div>
-<div class="card wide"><h3>删掉芬兰段</h3><p>赫尔辛基、伊瓦洛和伊纳里本身值得去，但在仅 12 天的窗口中会制造额外飞行、异地还车和较长公路转场，稀释斯瓦尔巴与北挪威的体验。</p></div>
-<div class="card wide"><h3>不塞入罗弗敦</h3><p>罗弗敦很强，但再加入会导致每天赶路。塞尼亚与特罗姆瑟更适合当前时长，并保留恶劣天气下的撤退空间。</p></div>
-</div>
+<section id="focus"><div class="wrap"><div class="eyebrow">Route focus</div><h2>路线的三个重点</h2><p class="lead">整个行程围绕三个层级组织：斯瓦尔巴是不可替代的核心；特罗姆瑟负责极光、补给和交通；塞尼亚提供短而高密度的海岸山地自驾。奥斯陆仅承担国际航班缓冲。</p>
+<div class="grid"><div class="card"><span class="stat">01</span><h3>斯瓦尔巴：高北极本体</h3><p>9 月 27 日至 10 月 2 日住朗伊尔城。优先完成一次峡湾/船行、一次正规向导荒原徒步或摄影活动，并给天气取消留出替补位置。</p></div><div class="card"><span class="stat">02</span><h3>特罗姆瑟：交通与极光基地</h3><p>10 月 2 日直飞抵达。用一个完整日做城市、缆车和追光，不在到达日安排不可退款的重活动。</p></div><div class="card"><span class="stat">03</span><h3>塞尼亚：一晚精华自驾</h3><p>只走北部景观线，重点放在 Bergsbotn、Tungeneset、Ersfjordstranda 与 Mefjordvær；天气差时主动缩短，不追求打卡数量。</p></div></div>
+<div class="notice"><strong>交通策略：</strong>返程前一晚回到奥斯陆机场区域。10 月 5 日从塞尼亚返回特罗姆瑟后，搭乘晚间航班前往奥斯陆，避免 10 月 6 日把北挪威国内航班与国际返程压在同一天。</div>
 </div></section>
-
-<section id="days"><div class="wrap">
-<div class="eyebrow">Day by day</div><h2>12 天可执行行程</h2>
-<p class="lead">航班时刻尚可能调整，下面固定“住宿城市与活动结构”，具体航班以出票时为准。斯瓦尔巴户外活动必须由正规向导带领。</p>
+<section id="days"><div class="wrap"><div class="eyebrow">Day by day</div><h2>当前执行路线</h2><p class="lead">航班号和活动运营日期在出票前仍需再次核对。路线结构已经固定，优先保证关键交通节点与 9 月底仍运营的斯瓦尔巴项目。</p>
 <div class="timeline">
-<div class="day"><div class="date">9/25 · 周五</div><div><h3>中国出发</h3><p>选择联程票前往奥斯陆。尽量避免不同票号的极短转机。</p><span class="tag">夜宿飞机</span></div></div>
-<div class="day"><div class="date">9/26 · 周六</div><div><h3>抵达奥斯陆，强制缓冲</h3><p>入住机场附近酒店，补给、防寒装备检查、调整时差。不要当天硬接朗伊尔城航班。</p><span class="tag">奥斯陆 1/1</span></div></div>
-<div class="day"><div class="date">9/27 · 周日</div><div><h3>奥斯陆 → 朗伊尔城</h3><p>抵达后步行熟悉镇区，采购零食与饮水，参观博物馆或参加城市导览。晚间观察天气与后续活动确认。</p><span class="tag">斯瓦尔巴 1/5</span></div></div>
-<div class="day"><div class="date">9/28 · 周一</div><div><h3>峡湾 / 冰川船行日</h3><p>优先预订当季仍运营的峡湾、冰川或野生动物船行。海况不佳时替换为煤矿、雪橇犬或摄影活动。</p><span class="tag">高价值活动 A</span></div></div>
-<div class="day"><div class="date">9/29 · 周二</div><div><h3>持枪向导荒原徒步</h3><p>选择中等强度的高地、冰碛或野生动物摄影徒步。两人体能足够，但不要脱离向导或自行越过镇区安全边界。</p><span class="tag">高价值活动 B</span></div></div>
-<div class="day"><div class="date">9/30 · 周三</div><div><h3>狗拉车 / 矿井 / 备用活动</h3><p>作为天气替换日：轮式狗拉车、3 号矿井、摄影巡游或文化体验。当天开始进入季节交界，活动供应会变化。</p><span class="tag">机动日 1</span></div></div>
-<div class="day"><div class="date">10/1 · 周四</div><div><h3>斯瓦尔巴最后完整日</h3><p>补做此前因天气取消的主活动；若计划顺利，可安排慢节奏摄影、博物馆和 Taste Svalbard 美食节相关体验。</p><span class="tag">机动日 2</span></div></div>
-<div class="day"><div class="date">10/2 · 周五</div><div><h3>朗伊尔城 → 特罗姆瑟</h3><p>优先查询同日直飞；没有合适直飞时按朗伊尔城—奥斯陆—特罗姆瑟出票。此日不安排不可退款活动。</p><span class="tag">特罗姆瑟 1/2</span></div></div>
-<div class="day"><div class="date">10/3 · 周六</div><div><h3>特罗姆瑟 + 极光夜</h3><p>白天缆车、港区与补给；夜间根据云图决定自驾或参加追光团。首次追光更建议专业小团。</p><span class="tag">特罗姆瑟 2/2</span></div></div>
-<div class="day"><div class="date">10/4 · 周日</div><div><h3>自驾特罗姆瑟 → 塞尼亚</h3><p>取车后前往塞尼亚北部，重点放在 Bergsbotn、Tungeneset、Ersfjordstranda、Mefjordvær 一线。避免夜间长距离山路。</p><span class="tag">塞尼亚 1/1</span></div></div>
-<div class="day"><div class="date">10/5 · 周一</div><div><h3>塞尼亚晨景 → 返回特罗姆瑟</h3><p>清晨拍摄后按天气选择短徒步，再返回特罗姆瑟机场附近住宿。把返程前夜放回交通枢纽，降低误机风险。</p><span class="tag">特罗姆瑟 3/3</span></div></div>
-<div class="day"><div class="date">10/6 · 周二</div><div><h3>特罗姆瑟 → 奥斯陆 → 中国</h3><p>购买同票号联程或留足转机时间。若国际回程时间不理想，应增加 10/6 奥斯陆住宿并将回国顺延一天。</p><span class="tag">返程</span></div></div>
-</div>
+<div class="day"><div class="date">9/25 · 周五</div><div><h3>中国出发</h3><p>购买同一票号或具备充分转机保护的国际联程，目标 9/26 抵达奥斯陆。</p><span class="tag">国际交通</span></div></div>
+<div class="day"><div class="date">9/26 · 周六</div><div><h3>奥斯陆机场缓冲夜</h3><p>不继续硬接朗伊尔城航班。用于处理长途延误、时差、装备检查和补给。</p><span class="tag critical">不可删除的缓冲</span></div></div>
+<div class="day"><div class="date">9/27 · 周日</div><div><h3>奥斯陆 → 朗伊尔城</h3><p>优先选择直飞。当前规划重点核对 Norwegian DY390；抵达后只安排镇区熟悉、补给与活动确认。</p><span class="tag">斯瓦尔巴 1/5</span></div></div>
+<div class="day"><div class="date">9/28 · 周一</div><div><h3>峡湾 / 冰川 / 野生动物船行</h3><p>将最受季节与海况影响的船行放在最前面；若取消，立刻把活动换到 9/29 或 9/30。</p><span class="tag critical">9 月底优先完成</span></div></div>
+<div class="day"><div class="date">9/29 · 周二</div><div><h3>正规向导荒原徒步或摄影</h3><p>选择仍在 9 月底运营的项目。镇外不自行行动，服从向导对天气、路线和野生动物安全的判断。</p><span class="tag">核心活动</span></div></div>
+<div class="day"><div class="date">9/30 · 周三</div><div><h3>第二户外项目 / 天气补位</h3><p>这是极地夏季活动的最后一天。优先补做船行或徒步，避免把依赖夏季运营的项目推迟到 10 月。</p><span class="tag critical">季节截止点</span></div></div>
+<div class="day"><div class="date">10/1 · 周四</div><div><h3>季节切换日</h3><p>进入 Northern Lights Winter。适合矿井、博物馆、狗场、城市体验、夜间追光或 Taste Svalbard 活动，也可作为此前项目的最后替补。</p><span class="tag">斯瓦尔巴 5/5</span></div></div>
+<div class="day"><div class="date">10/2 · 周五</div><div><h3>朗伊尔城 → 特罗姆瑟</h3><p>优先锁定 SAS SK4425 直飞。这是低频关键航段，当天不安排不可退款活动。</p><span class="tag critical">全程单点交通风险</span></div></div>
+<div class="day"><div class="date">10/3 · 周六</div><div><h3>特罗姆瑟完整日 + 极光夜</h3><p>白天缆车、港区与补给；夜间根据云量选择专业追光团或谨慎自驾。</p><span class="tag">北挪威 1/3</span></div></div>
+<div class="day"><div class="date">10/4 · 周日</div><div><h3>特罗姆瑟 → 塞尼亚</h3><p>早取车，走塞尼亚北部景观线。尽量在天黑和降温前抵达住宿，不在恶劣天气下强行完成全部观景点。</p><span class="tag">塞尼亚 1/1</span></div></div>
+<div class="day"><div class="date">10/5 · 周一</div><div><h3>塞尼亚 → 特罗姆瑟 → 奥斯陆</h3><p>上午只保留短景观停留，下午回机场还车，晚间飞奥斯陆并入住机场酒店。</p><span class="tag critical">返程缓冲夜</span></div></div>
+<div class="day"><div class="date">10/6 · 周二</div><div><h3>奥斯陆 → 中国</h3><p>从国际枢纽直接返程，不再叠加北挪威国内航班风险。</p><span class="tag">返程</span></div></div>
+</div></div></section>
+<section id="risks"><div class="wrap"><div class="eyebrow">Risk control</div><h2>必须提前处理的风险点</h2><p class="lead">风险控制以“避免整段行程失效”为排序原则。签证与关键航班属于 P0；普通景点取舍和餐厅安排不应占用当前决策时间。</p>
+<div class="risk-list">
+<div class="risk"><div class="risk-level high">P0 · 极高</div><div><b>申根入境次数错误</b><p>斯瓦尔巴不属于申根区，返回挪威本土时需要再次入境申根。</p></div><div><b>控制措施</b><p>申请 2 次或多次入境的挪威申根签证；说明信和行程单明确写出 Norway → Svalbard → Norway。</p></div></div>
+<div class="risk"><div class="risk-level high">P0 · 极高</div><div><b>10/2 LYR → TOS 低频航班</b><p>直飞班次少，错过或售罄会迫使绕行奥斯陆，影响整个北挪威段。</p></div><div><b>控制措施</b><p>本周锁定 SAS 直飞；当天不安排不可退款活动，并保留航空公司联系方式。</p></div></div>
+<div class="risk"><div class="risk-level high">P0 · 极高</div><div><b>9/30 季节运营截止</b><p>多项船行和夏季徒步只运营至 9 月底，10 月 1 日起活动结构改变。</p></div><div><b>控制措施</b><p>船行和关键户外项目排在 9/28–9/30；10/1 只放全年、室内或北极光冬季活动。</p></div></div>
+<div class="risk"><div class="risk-level mid">P1 · 高</div><div><b>斯瓦尔巴天气和海况取消</b><p>船行、徒步和能见度都可能受快速变化的天气影响。</p></div><div><b>控制措施</b><p>至少准备一个室内替补；预订时比较取消政策，不把全部价值压在单个活动上。</p></div></div>
+<div class="risk"><div class="risk-level mid">P1 · 高</div><div><b>北极熊与镇外安全</b><p>朗伊尔城外活动存在野生动物与偏远环境风险。</p></div><div><b>控制措施</b><p>镇外只参加正规运营商活动，不自行徒步，不将租枪视为普通游客的替代方案。</p></div></div>
+<div class="risk"><div class="risk-level mid">P1 · 高</div><div><b>塞尼亚低温、横风和结冰</b><p>10 月初道路条件可能快速变化，夜间驾驶会放大风险。</p></div><div><b>控制措施</b><p>确认冬胎与保险；两人轮换；按道路与天气主动删点；10/5 提前回特罗姆瑟。</p></div></div>
+<div class="risk"><div class="risk-level mid">P1 · 高</div><div><b>国际返程连锁延误</b><p>若 10/6 同日从特罗姆瑟飞奥斯陆再国际返程，前段延误会威胁整张国际票。</p></div><div><b>控制措施</b><p>10/5 晚回到奥斯陆并住机场酒店，将最后一个高风险衔接提前一天完成。</p></div></div>
+</div></div></section>
+<section id="priority"><div class="wrap"><div class="eyebrow">Time priority</div><h2>按时间执行，不按兴趣执行</h2><p class="lead">截至 2026 年 8 月 6 日，距离出发约 50 天。当前只处理会影响签证、交通骨架和季节性活动的事项。</p>
+<div class="priority-grid"><div class="priority now"><h3>现在：8/6—8/12</h3><ul><li>申请 2 次或多次入境申根签证</li><li>锁定 OSL→LYR 与 LYR→TOS 核心航班</li><li>预订斯瓦尔巴 5 晚可取消住宿</li><li>预订 9/28—9/30 季节性核心活动</li></ul></div><div class="priority next"><h3>随后：8/13—8/31</h3><ul><li>完成特罗姆瑟、塞尼亚和奥斯陆机场住宿</li><li>租车并核对冬胎、保险与第二驾驶员</li><li>购买旅行保险，核对偏远地区和户外活动条款</li><li>确认所有订单取消期限和付款节点</li></ul></div><div class="priority later"><h3>出发前：9/1—9/22</h3><ul><li>完成防寒装备、行李额度和分散装包</li><li>建立离线共享资料与应急联络表</li><li>9/22 完成航班、天气、道路和活动最终复核</li><li>最后 72 小时不新增项目，只做风险收敛</li></ul></div></div>
 </div></section>
-
-<section id="budget"><div class="wrap">
-<div class="eyebrow">Budget</div><h2>两人预算：约 ¥7.2–10.2 万</h2>
-<p class="lead">以下是规划区间，不是实时报价。最大波动项是国际机票、朗伊尔城住宿和船行类活动。</p>
-<div class="table"><table>
-<thead><tr><th>项目</th><th>两人预算</th><th>控制方法</th></tr></thead>
-<tbody>
-<tr><td>中国—挪威往返国际机票</td><td>¥18,000–28,000</td><td>优先联程、可改签；比较北京/上海/香港出发</td></tr>
-<tr><td>挪威境内与斯瓦尔巴航班</td><td>¥9,000–15,000</td><td>尽早锁定 OSL–LYR、LYR–TOS/OSL、TOS–OSL</td></tr>
-<tr><td>10 晚住宿</td><td>¥15,000–22,000</td><td>双床房；朗伊尔城优先可取消价格</td></tr>
-<tr><td>斯瓦尔巴活动</td><td>¥10,000–16,000</td><td>两项主活动 + 两项天气替换活动</td></tr>
-<tr><td>北挪威租车、燃油、停车</td><td>¥4,000–6,000</td><td>租 2 天而非全程；确认冬胎与保险</td></tr>
-<tr><td>餐饮</td><td>¥7,000–10,000</td><td>早餐/午餐简化，重点保留特色晚餐</td></tr>
-<tr><td>签证、保险、网络及杂项</td><td>¥3,000–5,000</td><td>保险必须覆盖户外活动及医疗转运</td></tr>
-<tr class="total"><td>总计</td><td>¥72,000–102,000</td><td>约 ¥36,000–51,000 / 人</td></tr>
-</tbody></table></div>
+<section id="board"><div class="wrap"><div class="board-head"><div><div class="eyebrow">Shared task board</div><h2>共享任务板</h2><p class="lead">任务状态来自 GitHub Issues。任何有仓库权限的人都可以在 Issue 中讨论、勾选子事项并关闭任务；网页刷新后会显示共同进度。</p></div><div class="progress-box"><b id="progressText">正在读取任务…</b><div class="progress-line"><div class="progress-fill" id="progressFill"></div></div></div></div>
+<div class="notice board-note"><strong>使用方式：</strong>打开任务卡进入 GitHub；子项完成时勾选清单，整项完成后关闭 Issue。不要在公开仓库上传护照、签证页、保单号、电话或其他敏感材料。</div>
+<div class="board"><div class="column"><h3>P0 · 立即处理</h3><div class="task-list" id="p0"><div class="loading">读取中…</div></div></div><div class="column"><h3>P1 · 本月完成</h3><div class="task-list" id="p1"><div class="loading">读取中…</div></div></div><div class="column"><h3>P2 · 出发前完成</h3><div class="task-list" id="p2"><div class="loading">读取中…</div></div></div></div>
+<p class="mini" style="margin-top:16px">完整任务列表：<a href="https://github.com/mtysgithub/arctic-trip-2026/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
 </div></section>
-
-<section id="visa"><div class="wrap">
-<div class="eyebrow">Visa & safety</div><h2>签证和安全逻辑</h2>
-<div class="notice"><strong>必须申请至少两次入境的申根签证。</strong> 路线是“挪威本土申根区 → 斯瓦尔巴非申根区 → 挪威本土申根区”，从斯瓦尔巴回到特罗姆瑟/奥斯陆时会再次进入申根区。</div>
-<div class="grid">
-<div class="card wide"><h3>斯瓦尔巴本身</h3><p>挪威当局不要求单独的斯瓦尔巴签证，但旅客必须持有效旅行证件；对需要申根签证的中国护照持有人，往返通常经挪威本土，因此仍需有效申根签证。</p></div>
-<div class="card wide"><h3>北极熊安全</h3><p>不要自行离开朗伊尔城安全区域。镇外活动跟随具备资质、携带防护装备的向导。普通游客不应把租枪当作替代方案。</p></div>
-<div class="card"><h3>驾车</h3><p>10 月初北挪威可能出现低温、冰雪、横风和快速变化的路况；确认车辆配置与道路状态。</p></div>
-<div class="card"><h3>天气</h3><p>船行与徒步均可能临时取消。新版安排两个斯瓦尔巴机动日，避免单点失败毁掉核心体验。</p></div>
-<div class="card"><h3>保险</h3><p>明确核对紧急医疗、搜救/转运、航班延误、户外徒步和船行项目是否被承保。</p></div>
-</div>
+<section id="budget"><div class="wrap"><div class="eyebrow">Budget guardrail</div><h2>预算控制线</h2><p class="lead">预算仍以两人合计约 ¥7.2–10.2 万作为规划区间。先锁定不可替代和低频项目，再优化餐饮、房型和城市活动。</p>
+<div class="table"><table><thead><tr><th>优先级</th><th>项目</th><th>两人规划区间</th><th>策略</th></tr></thead><tbody><tr><td>P0</td><td>国际机票 + 挪威/斯瓦尔巴核心航班</td><td>¥27,000–43,000</td><td>先保证合理衔接、行李与改签规则</td></tr><tr><td>P0</td><td>10 晚住宿</td><td>¥15,000–22,000</td><td>签证前优先可取消；斯瓦尔巴先订</td></tr><tr><td>P0/P1</td><td>斯瓦尔巴核心活动</td><td>¥10,000–16,000</td><td>两项主活动 + 一项天气替补</td></tr><tr><td>P1</td><td>租车、燃油、停车</td><td>¥4,000–6,000</td><td>只租塞尼亚段，确认冬胎和保险</td></tr><tr><td>P1/P2</td><td>餐饮、保险、网络与杂项</td><td>¥10,000–15,000</td><td>餐饮可调整，保险不可压缩</td></tr><tr class="total"><td colspan="2">两人总计</td><td>¥72,000–102,000</td><td>约 ¥36,000–51,000 / 人</td></tr></tbody></table></div>
 </div></section>
-
-<section id="book"><div class="wrap">
-<div class="eyebrow">Booking desk</div><h2>按这个顺序预订</h2>
-<div class="checklist">
-<div class="check">确认国际假期与可接受的奥斯陆缓冲夜</div>
-<div class="check">申请至少两次入境申根签证</div>
-<div class="check">锁定国际联程票</div>
-<div class="check">锁定奥斯陆—朗伊尔城航班</div>
-<div class="check">锁定朗伊尔城—特罗姆瑟衔接</div>
-<div class="check">预订朗伊尔城 5 晚可取消住宿</div>
-<div class="check">预订斯瓦尔巴两项核心活动</div>
-<div class="check">预订两项可替换活动</div>
-<div class="check">预订特罗姆瑟与塞尼亚住宿</div>
-<div class="check">预订 10/4—10/5 两日租车</div>
-<div class="check">购买覆盖北极户外活动的保险</div>
-<div class="check">出发前 72 小时复核天气与道路</div>
-</div>
-<div class="links-list">
-<a class="link-card" href="https://www.sysselmesteren.no/en/visas-and-immigration/" target="_blank"><strong>斯瓦尔巴总督府：签证</strong><small>两次入境要求的官方说明</small></a>
-<a class="link-card" href="https://en.visitsvalbard.com/activity-planner" target="_blank"><strong>Visit Svalbard 活动查询</strong><small>按日期与季节筛选运营项目</small></a>
-<a class="link-card" href="https://www.sas.no/" target="_blank"><strong>SAS</strong><small>查询挪威本土与朗伊尔城航班</small></a>
-<a class="link-card" href="https://www.norwegian.com/" target="_blank"><strong>Norwegian</strong><small>查询奥斯陆、特罗姆瑟与朗伊尔城航班</small></a>
-<a class="link-card" href="https://www.visittromso.no/" target="_blank"><strong>Visit Tromsø</strong><small>极光、活动与当地信息</small></a>
-<a class="link-card" href="https://www.vegvesen.no/trafikk/" target="_blank"><strong>挪威道路交通</strong><small>出发前检查路况、封路与摄像头</small></a>
-</div>
-</div></section>
+<section id="links"><div class="wrap"><div class="eyebrow">Official links</div><h2>执行入口</h2><div class="links-list"><a class="link-card" href="https://www.udi.no/en/word-definitions/svalbard/" target="_blank" rel="noopener"><strong>UDI：斯瓦尔巴与多次入境</strong><small>核对 2 次或多次入境申根签证要求</small></a><a class="link-card" href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en" target="_blank" rel="noopener"><strong>欧盟：申根签证申请</strong><small>申请时限、材料、处理周期与护照要求</small></a><a class="link-card" href="https://en.visitsvalbard.com/activity-planner" target="_blank" rel="noopener"><strong>Visit Svalbard 活动查询</strong><small>按日期核对 9 月底和 10 月初运营项目</small></a><a class="link-card" href="https://www.sas.no/flyreiser/longyearbyen/tromso" target="_blank" rel="noopener"><strong>SAS：朗伊尔城—特罗姆瑟</strong><small>核对 10/2 直飞价格、时间和余票</small></a><a class="link-card" href="https://www.norwegian.com/en/destinations/LongyearbyenSvalbard-Alldestinations" target="_blank" rel="noopener"><strong>Norwegian：朗伊尔城航线</strong><small>核对奥斯陆—朗伊尔城直飞</small></a><a class="link-card" href="https://www.vegvesen.no/trafikk/" target="_blank" rel="noopener"><strong>挪威道路交通</strong><small>出发前检查塞尼亚路况、封路与摄像头</small></a></div></div></section>
 </main>
-
-<footer><div class="wrap">
-<p><strong>北纬78°：2026 北极旅行计划 V2</strong></p>
-<p>版本日期：2026-08-05。预算和航班仅用于规划，出票前须以航空公司、住宿及活动运营方的实时信息为准。</p>
-</div></footer>
-</body></html>
+<footer><div class="wrap"><p><strong>北纬 78°：2026 北极旅行执行计划</strong></p><p>更新日期：2026-08-06。航班、活动和价格会变化，付款前以航空公司及运营方实时页面为准。共享任务板从公开 GitHub Issues 读取状态。</p></div></footer>
+<script>
+const departure=new Date('2026-09-25T00:00:00+08:00');
+const today=new Date();
+const days=Math.max(0,Math.ceil((departure-today)/86400000));
+document.getElementById('countdown').textContent=days+' 天';
+const api='https://api.github.com/repos/mtysgithub/arctic-trip-2026/issues?state=all&per_page=100';
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function priority(title){const m=title.match(/^\[(P[012])/);return m?m[1].toLowerCase():null;}
+function cleanTitle(title){return title.replace(/^\[P[012]\s*·\s*/, '[');}
+fetch(api,{headers:{'Accept':'application/vnd.github+json'}}).then(r=>{if(!r.ok)throw new Error('API '+r.status);return r.json();}).then(items=>{
+  const tasks=items.filter(x=>!x.pull_request&&priority(x.title)).sort((a,b)=>a.number-b.number);
+  ['p0','p1','p2'].forEach(id=>document.getElementById(id).innerHTML='');
+  tasks.forEach(t=>{
+    const p=priority(t.title),a=document.createElement('a');a.className='task '+(t.state==='closed'?'done':'');a.href=t.html_url;a.target='_blank';a.rel='noopener';
+    a.innerHTML='<div class="task-title">'+esc(cleanTitle(t.title))+'</div><div class="task-meta"><span>#'+t.number+'</span><span class="state '+t.state+'">'+(t.state==='closed'?'已完成':'进行中')+'</span></div>';
+    document.getElementById(p).appendChild(a);
+  });
+  ['p0','p1','p2'].forEach(id=>{if(!document.getElementById(id).children.length)document.getElementById(id).innerHTML='<div class="loading">暂无任务</div>';});
+  const done=tasks.filter(t=>t.state==='closed').length,total=tasks.length,pct=total?Math.round(done/total*100):0;
+  document.getElementById('progressText').textContent=done+' / '+total+' 项已完成 · '+pct+'%';document.getElementById('progressFill').style.width=pct+'%';document.getElementById('taskMetric').textContent=done+' / '+total;
+}).catch(()=>{
+  document.getElementById('progressText').textContent='任务状态暂时无法读取';
+  ['p0','p1','p2'].forEach(id=>document.getElementById(id).innerHTML='<a class="task" href="https://github.com/mtysgithub/arctic-trip-2026/issues" target="_blank" rel="noopener"><div class="task-title">前往 GitHub 查看任务</div></a>');
+});
+</script>
+</body>
+</html>
