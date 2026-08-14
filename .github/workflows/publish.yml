@@ -22,7 +22,8 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p dist
-          cp index.html dist/index.html
+          cp index.html favicon.svg dist/
+          cp -R assets dist/assets
           touch dist/.nojekyll
 
       - name: Publish gh-pages branch
