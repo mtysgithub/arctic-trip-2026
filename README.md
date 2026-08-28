@@ -24,6 +24,7 @@ https://github.com/mtysgithub/arctic-trip-2026/issues
 ## 项目结构
 
 - `index.html`：路线、风险、时间优先级与动态任务板
+- `environment-monitor.html`：气候、海洋/海冰、冰川/冻土、野生动物的出行前与途中自查监控台（含日期节点、红黄绿决策规则、官方快速链接与本机勾选）
 - `.github/workflows/publish.yml`：将 `main` 自动发布到 `gh-pages`
 - `gh-pages`：GitHub Pages 的发布分支
 
