@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="北纬78°｜2026北极之旅：气候、海洋、海冰、冰川、永久冻土与野生动物出行前/途中环境风险监控台。">
+<link rel="icon" href="./favicon.svg">
+<title>环境监控台｜北纬78° · 2026 北极之旅</title>
+<style>
+:root{--paper:#e8eef0;--light:#f5f7f5;--ink:#132c35;--muted:#536e76;--line:#132c3533;--ice:#bfdde4;--teal:#0d4a54;--orange:#e56a36;--green:#2d6b57;--yellow:#b7791f;--red:#a33a2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--light);color:var(--ink);font-family:"Noto Sans SC","PingFang SC",Arial,sans-serif}a{color:inherit;text-decoration:none}::selection{background:var(--orange);color:#fff}
+header{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto;align-items:center;height:72px;padding:0 5vw;background:#f5f7f5e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800}.brand b{font-size:18px}.brand small{font:700 10px ui-monospace,monospace;letter-spacing:.14em}.mountains{width:44px;height:25px;position:relative}.mountains i{position:absolute;bottom:2px;left:0;width:29px;height:23px;background:var(--teal);clip-path:polygon(50% 0,100% 100%,0 100%)}.mountains i+i{width:23px;height:16px;left:20px}
+header nav{display:flex;gap:9px;align-items:center}header nav a{border:1px solid var(--line);padding:10px 13px;border-radius:4px;font-size:11px;font-weight:750}header nav a.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.hero{padding:68px 5vw 42px;background:repeating-linear-gradient(90deg,transparent 0 119px,#536e761f 120px),repeating-linear-gradient(0deg,transparent 0 89px,#536e761f 90px),radial-gradient(circle at 78% 22%,#bfdde4d9,transparent 28%),var(--paper)}
+.hero-inner{max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:55px;align-items:end}.eyebrow{margin:0 0 18px;color:var(--muted);font:800 10px ui-monospace,monospace;letter-spacing:.16em}.hero h1{margin:0;font-size:clamp(52px,6vw,94px);line-height:.9;letter-spacing:-.06em}.hero h1 span{color:var(--orange)}.hero .lead{max-width:800px;color:var(--muted);font-size:15px;line-height:1.85;margin:26px 0 0}.hero-note{border-left:3px solid var(--orange);padding:4px 0 4px 18px}.hero-note b{display:block;font:850 42px ui-monospace,monospace}.hero-note span{display:block;color:var(--muted);font-size:12px;line-height:1.7}.hero-note strong{color:var(--orange)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--teal);color:#fff;padding:0 5vw}.stats div{min-height:135px;padding:27px 24px;border-right:1px solid #ffffff24}.stats small{display:block;color:#ffffff8a;font:700 9px ui-monospace,monospace;letter-spacing:.12em}.stats b{display:block;margin:13px 0 6px;font-size:21px}.stats p{margin:0;color:#ffffffba;font-size:11px;line-height:1.65}
+.section{max-width:1500px;margin:auto;padding:88px 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}.section-head h2{margin:0;font-size:clamp(38px,4.5vw,64px);line-height:.95;letter-spacing:-.05em}.section-head>p{max-width:530px;margin:0;color:var(--muted);font-size:13px;line-height:1.75}
+.recheck{padding-top:70px}.recheck-banner{display:grid;grid-template-columns:180px 1fr auto;gap:24px;align-items:center;padding:25px 28px;background:#eaf4ef;border:1px solid #2d6b5745;border-left:5px solid var(--green)}.recheck-banner small{display:block;color:var(--green);font:800 9px ui-monospace,monospace;letter-spacing:.12em}.recheck-banner b{display:block;margin-top:7px;font-size:22px}.recheck-banner p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.recheck-banner time{font:750 10px ui-monospace,monospace;color:var(--muted);text-align:right}.watch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.watch{position:relative;background:#fff;border:1px solid var(--line);padding:22px}.watch .state{display:inline-block;padding:5px 7px;border-radius:3px;color:#fff;font:800 9px ui-monospace,monospace;letter-spacing:.08em}.watch .state.green{background:var(--green)}.watch .state.yellow{background:var(--yellow)}.watch .state.gray{background:var(--muted)}.watch h3{margin:15px 0 8px;font-size:18px}.watch p{margin:0;color:var(--muted);font-size:11px;line-height:1.75}.watch a{display:inline-block;margin-top:13px;border-bottom:1px solid var(--ink);font-size:10px;font-weight:750}.watch .metric{display:block;margin:11px 0 2px;color:var(--ink);font:800 16px ui-monospace,monospace}
+.snapshot{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{border:1px solid var(--line);background:#fff;padding:24px}.card .tag{display:inline-block;padding:5px 7px;border-radius:3px;background:var(--paper);color:var(--teal);font:800 9px ui-monospace,monospace;letter-spacing:.08em}.card h3{margin:16px 0 10px;font-size:20px}.card p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}.card a{display:inline-block;margin-top:15px;border-bottom:1px solid var(--ink);font-size:11px;font-weight:750}
+.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.decision article{background:#fff;padding:28px}.decision .light{width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:8px}.green{background:var(--green)}.yellow{background:var(--yellow)}.red{background:var(--red)}.decision h3{display:inline;font-size:18px}.decision p{color:var(--muted);font-size:12px;line-height:1.8}.decision ul{margin:15px 0 0;padding-left:18px;color:var(--muted);font-size:11px;line-height:1.8}
+.notice{margin-top:18px;padding:18px 20px;background:#fff4eb;border-left:3px solid var(--orange);font-size:12px;line-height:1.75}.notice b{color:var(--orange)}
+.timeline{border-top:2px solid var(--ink)}.trow{display:grid;grid-template-columns:150px 95px 1fr 115px;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}.trow time{font:800 15px ui-monospace,monospace}.trow .delta{color:var(--orange);font:800 10px ui-monospace,monospace}.trow h3{margin:0 0 6px;font-size:16px}.trow p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}.trow button,.check button{border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:3px;font-size:10px;font-weight:750;cursor:pointer}.trow.done{opacity:.5}.trow.done h3{text-decoration:line-through}.trow.next{background:#eef5f5;box-shadow:inset 3px 0 0 var(--orange);padding-left:14px;padding-right:14px}
+.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.check{border-top:2px solid var(--ink);padding-top:18px}.check h3{margin:0 0 10px;font-size:22px}.check>p{margin:0 0 16px;color:var(--muted);font-size:11px;line-height:1.7}.check label{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:11px;line-height:1.55;cursor:pointer}.check input{margin-top:2px;accent-color:var(--teal)}.check label:has(input:checked){color:var(--muted);text-decoration:line-through}.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.links a{border:1px solid var(--line);background:#fff;padding:9px 11px;border-radius:3px;font-size:10px;font-weight:750}.links a:hover{background:var(--teal);color:#fff}
+.incidents{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.incident{padding:22px;background:#fff;border:1px solid var(--line)}.incident time{color:var(--orange);font:800 10px ui-monospace,monospace}.incident h3{margin:10px 0 8px;font-size:17px}.incident p{margin:0;color:var(--muted);font-size:11px;line-height:1.7}.incident a{display:inline-block;margin-top:12px;font-size:10px;font-weight:750;border-bottom:1px solid var(--ink)}
+.refs{columns:2;column-gap:28px}.ref{break-inside:avoid;padding:13px 0;border-bottom:1px solid var(--line)}.ref b{display:block;font-size:12px}.ref span{display:block;margin:5px 0;color:var(--muted);font-size:10px;line-height:1.5}.ref a{font-size:10px;font-weight:750;color:var(--teal)}
+.toolbar{display:flex;gap:10px;align-items:center;margin-top:20px}.toolbar button{border:1px solid var(--ink);background:#fff;padding:10px 12px;border-radius:3px;font-size:10px;font-weight:750;cursor:pointer}.toolbar span{color:var(--muted);font-size:10px}
+footer{display:grid;grid-template-columns:90px 1fr auto;align-items:center;background:#0b2f37;color:#fff;padding:35px 5vw}footer>b{color:var(--orange);font:850 36px ui-monospace,monospace}footer strong{font-size:12px}footer p{margin:6px 0 0;color:#ffffff75;font-size:9px}footer a{font-size:10px;font-weight:750}
+@media(max-width:900px){.hero-inner,.snapshot,.decision,.check-grid,.incidents,.watch-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.recheck-banner{grid-template-columns:1fr}.recheck-banner time{text-align:left}.trow{grid-template-columns:110px 70px 1fr}.trow button{grid-column:3;justify-self:start}.refs{columns:1}.section-head{flex-direction:column;align-items:start}.hero{padding-top:45px}}
+@media(max-width:560px){header{padding:0 18px}.brand small{display:none}header nav a:not(.primary){display:none}.hero,.section{padding-left:20px;padding-right:20px}.hero h1{font-size:50px}.stats{padding:0}.stats div{padding:22px 16px}.recheck-banner{padding:22px}.trow{grid-template-columns:1fr 70px}.trow>div{grid-column:1/-1}.trow button{grid-column:1}.hero-note b{font-size:32px}footer{grid-template-columns:60px 1fr}footer a{grid-column:2;margin-top:10px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="./index.html"><span class="mountains"><i></i><i></i></span><span><b>北纬 78°</b><small> · ARCTIC FIELD LOG</small></span></a>
+  <nav><a href="#recheck">今日结论</a><a href="#timeline">自查节点</a><a href="#checklists">现场清单</a><a href="#sources">数据源</a><a class="primary" href="./index.html">返回总行程 ↗</a></nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">ENVIRONMENT WATCH · RECHECKED 2026.09.22</p>
+      <h1>北极环境<br><span>监控台</span></h1>
+      <p class="lead">把“全球气候背景”与“真正影响当天安全的局地天气、海况、冰川/冻土、自然灾害和野生动物”分开看。全球 ENSO 和海温异常用于理解背景；真正决定是否出发的，是 MET / Yr、Varsom、运营方与斯瓦尔巴总督的当日信息。</p>
+    </div>
+    <div class="hero-note">
+      <b id="countdown">—</b>
+      <span>距 2026.09.25 出发<br><strong id="nextcheck">正在计算下一自查节点</strong></span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><small>GLOBAL BACKGROUND · 09.10</small><b>El Niño Advisory</b><p>NOAA：8 月 Niño-3.4 升至 +1.8°C；秋冬出现“很强事件”的概率 &gt;90%。只作背景，不作为本次活动取消阈值。</p></div>
+  <div><small>MET ALERTS · 09.22</small><b>无有效警报</b><p>04:13 CEST 核查 Longyearbyen 点位：MET Alerts 返回 0 条有效事件。下一次强制复核为 9/24。</p></div>
+  <div><small>LYR / ISFJORDEN</small><b>暂定绿色</b><p>9/27–29 早期预报为约 2.5–3.8°C、风偏弱；Isfjorden 模型浪高约 0.3–0.7 m。仍以运营方和船长为准。</p></div>
+  <div><small>WILDLIFE / GOVERNOR</small><b>规则不变</b><p>截至 9/22，Governor 新闻流未见新的熊情封线或旅行限制；H5N5 风险仍要求不接触病弱或死亡动物。</p></div>
+</section>
+
+<section class="section recheck" id="recheck">
+  <div class="section-head"><div><p class="eyebrow">T-72H RECHECK · 2026.09.22</p><h2>今天的结论</h2></div><p>这是第一次实际 Go / No-Go。结论只覆盖已经进入可用预报窗口的奥斯陆与斯瓦尔巴；10/2 之后的特罗姆瑟、极光和塞尼亚路况现在还不能下结论。</p></div>
+  <div class="recheck-banner"><div><small>OVERALL STATE</small><b>PROVISIONAL GREEN</b></div><p><strong>行程继续，不触发取消。</strong>目前没有官方天气警报、公开旅行限制或已知活动取消信号。保留黄色观察：临行前有雨夹雪/降雨过程，9/30 后重新接近冰点，且 6–9 天预报仍会漂移。</p><time>核查于 09.22 04:50 CEST<br>10:50 北京时间</time></div>
+  <div class="watch-grid">
+    <article class="watch"><span class="state green">GREEN · 官方警报</span><h3>Longyearbyen 无有效 MET 警报</h3><p>MET Alerts 在核查时返回 0 条事件。该结果会变化，必须在 9/24、抵达后及每天出发前重查。</p><a href="https://api.met.no/weatherapi/metalerts/2.0/current.json?lat=78.2232&amp;lon=15.6469" target="_blank" rel="noreferrer">MET Alerts 原始数据 ↗</a></article>
+    <article class="watch"><span class="state yellow">WATCH · 温度相态</span><h3>9/27–29 偏温和；9/30 后降温</h3><p><span class="metric">9/27–29 · 约 2.5–3.8°C</span>当前模型给出的持续风约 2–3 m/s；9/30 最低约 -0.8°C，10/1 最低约 -1.8°C。5 天后的数值只看趋势，不当作承诺。</p><a href="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=78.2232&amp;lon=15.6469" target="_blank" rel="noreferrer">MET Locationforecast ↗</a></article>
+    <article class="watch"><span class="state green">GREEN / WATCH · 海况模型</span><h3>Isfjorden 暂无高浪信号</h3><p><span class="metric">9/27 · 0.6–0.7 m<br>9/28 · 约 0.4 m</span>这是 78.3°N, 15.5°E 单点模型，不代表完整航线，也不能替代 MS Bard 船长的适航判断。</p><a href="https://api.met.no/weatherapi/oceanforecast/2.0/complete?lat=78.3&amp;lon=15.5" target="_blank" rel="noreferrer">MET Oceanforecast ↗</a></article>
+    <article class="watch"><span class="state green">GREEN · 官方公告</span><h3>没有新的熊情封线公告</h3><p>Governor 新闻流截至 9/22 的最新条目为 9/10 应急演练；未见新的北极熊封线或旅行限制。8/25 的第二起北极熊 H5N5 通报仍是相关最新信息。</p><a href="https://www.sysselmesteren.no/en/news/rss" target="_blank" rel="noreferrer">Governor News RSS ↗</a></article>
+    <article class="watch"><span class="state gray">PENDING · 海冰</span><h3>不从海冰图自行推导“可航”</h3><p>海冰图用于趋势理解；Billefjorden / Nordenskiöldbreen 实际路线、浮冰与冰川前缘距离由运营方和船长当天决定。9/24 和 9/27 再打开最新冰图。</p><a href="https://cryo.met.no/en/latest-ice-charts" target="_blank" rel="noreferrer">MET 最新冰图 ↗</a></article>
+    <article class="watch"><span class="state yellow">ACTION · 运营方确认</span><h3>还差最后一层直接确认</h3><p>公开数据不能确认你们的具体船班与 Foxfonna 路线。9/24 检查短信/邮件；9/27 抵达后向酒店或运营方确认地面、熊情、集合时间和装备变化。</p><a href="https://hurtigrutensvalbard.com/" target="_blank" rel="noreferrer">Hurtigruten Svalbard ↗</a></article>
+  </div>
+</section>
+
+<section class="section" id="snapshot">
+  <div class="section-head"><div><p class="eyebrow">CURRENT BASELINE</p><h2>现在该怎么看</h2></div><p>这不是“预测两个月后会不会出事故”的系统，而是把风险信号按可操作性排序。越接近出发，越要从全球尺度切换到本地尺度。</p></div>
+  <div class="snapshot">
+    <article class="card"><span class="tag">BACKGROUND · MONTHLY</span><h3>ENSO / 全球海温</h3><p>NOAA 已发布 El Niño Advisory。它能解释大尺度气候背景，但不能单独推出“斯瓦尔巴两个月后必然更暖/更危险”。网站只把它作为背景灯，不作为取消行程的阈值。</p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.html" target="_blank" rel="noreferrer">NOAA ENSO Discussion ↗</a></article>
+    <article class="card"><span class="tag">REGIONAL · DAILY</span><h3>海冰 + 海表温度</h3><p>斯瓦尔巴海冰图可日更到 1 km；北极 SST 产品日更。临行前看 Isfjorden / Spitsbergen 周边变化趋势即可，不要把“海冰少”误解成“北极熊一定离人更远”。</p><a href="https://data.marine.copernicus.eu/product/SEAICE_ARC_SEAICE_L4_NRT_OBSERVATIONS_011_002/description" target="_blank" rel="noreferrer">Copernicus Svalbard Sea Ice ↗</a></article>
+    <article class="card"><span class="tag">LOCAL · HOURLY / DAILY</span><h3>天气、风、降水相态、能见度</h3><p>9/18 起这组数据权重最高。尤其关注 0°C 附近的雨雪转换、强阵风、低云/雾和连续降水；它们比全球指数更直接影响船行、徒步、冻融与航班。</p><a href="https://www.yr.no/en/forecast/daily-table/2-2729907/Norway/Svalbard/Longyearbyen" target="_blank" rel="noreferrer">Yr · Longyearbyen ↗</a></article>
+    <article class="card"><span class="tag">FIELD · SAME DAY</span><h3>向导 / 总督 / 运营方优先</h3><p>公开数据不能替代冰川前缘安全距离、熊情、登陆点检查和船只适航判断。只要运营方、向导或总督信息与“自己看图”冲突，一律以现场专业判断为准。</p><a href="https://www.sysselmesteren.no/en/news/" target="_blank" rel="noreferrer">Governor of Svalbard · News ↗</a></article>
+  </div>
+</section>
+
+<section class="section" id="decision">
+  <div class="section-head"><div><p class="eyebrow">GO / CAUTION / NO-GO</p><h2>绿黄红决策规则</h2></div><p>阈值尽量锚定官方等级和运营方决定，而不是自创一个“风速多少就一定危险”的统一数字；不同船型、线路、地形的限制并不一样。</p></div>
+  <div class="decision">
+    <article><span class="light green"></span><h3>GREEN · 正常执行</h3><ul><li>无 MET 重要天气警报。</li><li>运营方确认项目正常。</li><li>无总督关于目标区域的临时限制/事件。</li><li>海况、能见度与线路均在运营方接受范围。</li></ul></article>
+    <article><span class="light yellow"></span><h3>YELLOW · 降级执行</h3><ul><li>出现黄色天气预警，或 24–48h 内预报快速恶化。</li><li>0°C 附近连续降雨/湿雪、强阵风、低能见度。</li><li>运营方改线、缩短、延迟或“待定”。</li><li>目标线路附近出现北极熊/异常动物报告。</li></ul></article>
+    <article><span class="light red"></span><h3>RED · 取消 / 改期</h3><ul><li>MET 橙色/红色预警；或适用的 Varsom 风险达到 3 级及以上。</li><li>运营方取消、封路/封线、总督限制。</li><li>冰川前缘、落石/冻土塌滑或野生动物导致现场关闭。</li><li>任何需要你绕开专业判断“自己赌一下”的情况。</li></ul></article>
+  </div>
+  <div class="notice"><b>重要：</b>Nordenskiöld Land 的常规雪崩区域预报主要在 <b>12 月 1 日—5 月 31 日</b>发布。你们 9/27–10/2 在斯瓦尔巴时看到“Not assessed / 未评估”，绝不能理解为“安全”。秋季山地活动仍应依赖天气、地形和向导现场判断。</div>
+</section>
+
+<section class="section" id="timeline">
+  <div class="section-head"><div><p class="eyebrow">CHECKPOINTS</p><h2>按日期自查</h2></div><p>每次只查当阶段最有价值的东西，避免每天盯几十张图。抵达斯瓦尔巴后，固定为“早上出门前 + 晚上为次日复核”。</p></div>
+  <div class="timeline" id="timelineList">
+    <article class="trow" data-date="2026-08-28"><time>08.28</time><span class="delta">T-28</span><div><h3>建立基线</h3><p>记录 NOAA ENSO；打开 Copernicus 海冰/SST；收藏 Yr、MET、Varsom、Governor；下载 Varsom 离线地形图。确认没有把 ENSO 当成局地灾害预报。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-04"><time>09.04</time><span class="delta">T-21</span><div><h3>第一次趋势复核</h3><p>看过去一周 Svalbard 周边海冰和 SST 是否持续异常；复核 Governor 新公告、野生动物/疾病消息；确认 9 月底项目仍运营。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-10"><time>09.10–11</time><span class="delta">T-15</span><div><h3>NOAA 9 月 ENSO 更新</h3><p>第二个星期四通常发布月度 ENSO Discussion。只更新背景判断；不要据此替代 Longyearbyen 的 7–10 天局地预报。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-18"><time>09.18</time><span class="delta">T-7</span><div><h3>切换到“本地优先”</h3><p>开始每天看 Longyearbyen：气温、阵风、降水相态、能见度、天气预警；同时查看 Svalbard 海冰与海况。对 9/28–10/1 的船/徒步项目建立 A/B 备选。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-22"><time>09.22</time><span class="delta">T-72h</span><div><h3>第一次实际 Go / No-Go · 已复核</h3><p>结论：暂定绿色、继续执行。Longyearbyen 无有效 MET 警报；9/27–29 早期预报约 2.5–3.8°C、风偏弱；Isfjorden 9/27–28 模型浪高约 0.4–0.7 m。尚待 9/24 与运营方直接确认。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-24"><time>09.24</time><span class="delta">T-24h</span><div><h3>离境前最终复核</h3><p>重查 MET Alerts、9/27–29 逐小时风/雨雪/能见度、Isfjorden 海况与最新冰图；检查 Hurtigruten / Green Dog 短信和邮件；同时看奥斯陆与 OSL→LYR 航空天气趋势。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-25"><time>09.25</time><span class="delta">出发</span><div><h3>广州 → 阿姆斯特丹 → 奥斯陆</h3><p>只需关注航班、奥斯陆天气与 9/27 OSL→LYR 的趋势。全球气候图从此降到最低优先级。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-27"><time>09.27</time><span class="delta">LYR D1</span><div><h3>抵达朗伊尔城：做一次现场重置</h3><p>到镇后看最新 Governor / Visit Svalbard 信息；向住宿或运营方询问近期熊情和地面状况。镇外活动只跟正规组织；不要根据“没看到海冰”降低熊防意识。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-28"><time>09.28–10.01</time><span class="delta">LYR D2–5</span><div><h3>每天 07:00 + 20:00 两次复核</h3><p>07:00：当天警报、风/浪、雨雪、能见度、运营方确认、熊情。20:00：为次日重排项目。任何冰川/船行安全距离由向导和船长决定。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-09-29"><time>09.29–10.01</time><span class="delta">TOS 前瞻</span><div><h3>特罗姆瑟进入有效预报窗口</h3><p>开始看 10/2 晚间低、中、高云量、降水和风；同时查看追光运营方通知。极光活动强弱不是唯一变量，云量与追光团可机动范围更关键。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-10-02"><time>10.02</time><span class="delta">LYR→TOS</span><div><h3>离开群岛</h3><p>重点转为飞行天气、Tromsø 风/降水和次日极光云量；斯瓦尔巴环境监控可以结束。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-10-03"><time>10.03</time><span class="delta">SENJA T-24h</span><div><h3>塞尼亚自驾最终复核</h3><p>用 175.no / Vegvesen 查封路、事故、施工与山口状态；复核风、降雪、路面结冰和能见度。确认租车轮胎与随车装备，必要时缩短 10/4 线路。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-10-04"><time>10.04</time><span class="delta">SENJA</span><div><h3>特罗姆瑟 → 塞尼亚自驾</h3><p>检查 MET/Yr 风、降雪/结冰、能见度；若天气快速恶化，优先缩短线路，不为了拍摄硬进暴露海岸公路。</p></div><button>标记完成</button></article>
+    <article class="trow" data-date="2026-10-08"><time>10.08</time><span class="delta">个人返程</span><div><h3>奥斯陆启程回国</h3><p>两人主行程于 10/6 结束；个人奥斯陆延长段于 10/8 返程。结束环境监控，并保留行程期间的取消/改期通知、天气警报截图和运营方消息，以备保险或费用追踪使用。</p></div><button>标记完成</button></article>
+  </div>
+</section>
+
+<section class="section" id="checklists">
+  <div class="section-head"><div><p class="eyebrow">FIELD CHECKLIST</p><h2>出门前 3 分钟</h2></div><p>勾选状态仅保存在当前浏览器 LocalStorage，不上传 GitHub，也不含任何隐私信息。</p></div>
+  <div class="check-grid">
+    <div class="check"><h3>01 · 气候 / 陆地</h3><p>真正决定徒步和陆上活动的局地信号。</p>
+      <label><input type="checkbox" data-k="weather-alert">MET / Yr 是否有当天重要天气警报</label>
+      <label><input type="checkbox" data-k="temp-phase">最高/最低温是否围绕 0°C，是否出现雨→冻 / 湿雪转换</label>
+      <label><input type="checkbox" data-k="wind-vis">阵风、低云、雾、能见度是否影响线路</label>
+      <label><input type="checkbox" data-k="rain-thaw">过去 24–48h 是否有明显升温或连续降雨，可能加剧冻土/坡面软化</label>
+      <label><input type="checkbox" data-k="varsom-context">Varsom/Regobs 是否有相关现场观测；“未评估”不当作安全</label>
+      <div class="links"><a href="https://www.yr.no/en/forecast/daily-table/2-2729907/Norway/Svalbard/Longyearbyen" target="_blank">Yr LYR ↗</a><a href="https://www.met.no/en/weather-and-climate" target="_blank">MET ↗</a><a href="https://www.varsom.no/en/about/regobs/" target="_blank">Varsom / Regobs ↗</a></div>
+    </div>
+    <div class="check"><h3>02 · 海洋 / 海冰</h3><p>船行与近岸活动重点看“当天海况”，海温/海冰主要用于趋势理解。</p>
+      <label><input type="checkbox" data-k="seaice">Copernicus Svalbard 1 km 海冰图是否出现显著周际变化</label>
+      <label><input type="checkbox" data-k="sst">北极 SST 日更图：Isfjorden / 西斯匹次卑尔根附近是否持续异常偏暖</label>
+      <label><input type="checkbox" data-k="waves">当天浪高、涌浪方向、海风与能见度是否经运营方确认可接受</label>
+      <label><input type="checkbox" data-k="captain">若自己看图与船长/运营方判断冲突，已确认以运营方为准</label>
+      <div class="links"><a href="https://data.marine.copernicus.eu/product/SEAICE_ARC_SEAICE_L4_NRT_OBSERVATIONS_011_002/description" target="_blank">海冰 1 km ↗</a><a href="https://data.marine.copernicus.eu/product/SEAICE_ARC_PHY_SST-IST_L3S_NRT_011_022/description" target="_blank">Arctic SST ↗</a><a href="https://www.met.no/en/Sea-and-High-North-areas" target="_blank">MET Sea & Ice ↗</a></div>
+    </div>
+    <div class="check"><h3>03 · 冰川 / 永久冻土</h3><p>没有一个公开“冰川今天安全/不安全”的单一实时指数。</p>
+      <label><input type="checkbox" data-k="glacier-operator">冰川/峡湾项目当天状态已向运营方确认</label>
+      <label><input type="checkbox" data-k="glacier-distance">不自行接近冰川前缘、冰崖、落石沟或新鲜裂隙；安全距离完全服从向导</label>
+      <label><input type="checkbox" data-k="tundra">发现冻土塌陷、泥水沟、地裂、坡面新鲜滑塌时不穿越</label>
+      <label><input type="checkbox" data-k="calving">船上看到崩冰/冰山翻转时不为了拍摄要求靠近，服从船长撤离</label>
+      <div class="links"><a href="https://www.met.no/nyhetsarkiv/-det-er-nesten-sa-jeg-ikke-klarer-a-tro-pa-det-jeg-ser" target="_blank">MET · 2026 冻土变化 ↗</a><a href="https://en.visitsvalbard.com/visitor-information/travel-information/everything-you-need-to-know-before-departure" target="_blank">Visit Svalbard Safety ↗</a></div>
+    </div>
+    <div class="check"><h3>04 · 野生动物 / 北极熊</h3><p>不存在可靠的公开“实时北极熊位置地图”；现场信息最重要。</p>
+      <label><input type="checkbox" data-k="gov-news">当天已查看 Governor 最新公告 / 事件</label>
+      <label><input type="checkbox" data-k="guided">离开定居点仅参加组织化活动，向导具备熊防方案</label>
+      <label><input type="checkbox" data-k="scan">登陆/下车前由向导进行远距离扫描；发现熊就改变路线而非接近</label>
+      <label><input type="checkbox" data-k="dead-animal">不接触病弱或死亡动物；发现异常动物按 Governor 渠道报告</label>
+      <label><input type="checkbox" data-k="food-carcass">不靠近大型尸体、海滩漂尸等可能吸引熊的食物源</label>
+      <div class="links"><a href="https://www.sysselmesteren.no/en/news/" target="_blank">Governor News ↗</a><a href="https://npolar.no/en/species/polar-bear/" target="_blank">NPI Polar Bear ↗</a><a href="https://www.sysselmesteren.no/en/publications/booklets-and-publications/safety-in-svalbard/" target="_blank">Safety in Svalbard ↗</a></div>
+    </div>
+    <div class="check"><h3>05 · 特罗姆瑟 / 极光</h3><p>9/22 尚未进入 10/2 的高可信预报窗口；从 9/29 开始检查。</p>
+      <label><input type="checkbox" data-k="tromso-cloud-layers">10/2 晚间低、中、高云量与降水趋势已检查</label>
+      <label><input type="checkbox" data-k="tromso-wind-temp">风、体感温度和路面状况适合夜间长时间户外</label>
+      <label><input type="checkbox" data-k="aurora-operator">追光团集合时间、地点和当晚执行状态已确认</label>
+      <label><input type="checkbox" data-k="aurora-nowcast">出发当天再看 NOAA 30 分钟极光预报；不把 Kp 单独当作成败开关</label>
+      <div class="links"><a href="https://www.yr.no/en/forecast/daily-table/1-305409/Norway/Troms/Troms%C3%B8/Troms%C3%B8" target="_blank">Yr Tromsø ↗</a><a href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast" target="_blank">NOAA Aurora ↗</a></div>
+    </div>
+    <div class="check"><h3>06 · 塞尼亚自驾</h3><p>10/4–5 的道路结论要在 10/3 与出发当天形成，今天只保留检查入口。</p>
+      <label><input type="checkbox" data-k="senja-traffic">175.no / Vegvesen 已查封路、事故、施工和桥梁限制</label>
+      <label><input type="checkbox" data-k="senja-ice">降雪、冻雨、路面结冰、侧风与能见度已复核</label>
+      <label><input type="checkbox" data-k="senja-car">租车轮胎类型、刮冰器、警示装备与道路救援电话已确认</label>
+      <label><input type="checkbox" data-k="senja-buffer">路线保留缩短方案，不为观景点压缩 10/5 返程余量</label>
+      <div class="links"><a href="https://www.vegvesen.no/trafikk/" target="_blank">Vegvesen Traffic ↗</a><a href="https://www.yr.no/en/forecast/daily-table/1-289425/Norway/Troms/Senja/Hamn" target="_blank">Yr Hamn i Senja ↗</a></div>
+    </div>
+  </div>
+  <div class="toolbar"><button id="resetChecks">清空本机勾选</button><span id="checkState">0 项已确认</span></div>
+</section>
+
+<section class="section" id="incidents">
+  <div class="section-head"><div><p class="eyebrow">INCIDENT MEMORY</p><h2>为什么这些规则存在</h2></div><p>只保留与你们线路和行为决策最相关的案例，不把个案当作“熊越来越会袭人”的统计结论。</p></div>
+  <div class="incidents">
+    <article class="incident"><time>2020.08.28</time><h3>Longyearbyen Camping 致命袭击</h3><p>一名荷兰男子在朗伊尔城露营地遭北极熊袭击后死亡。案例说明：即使非常靠近定居点与机场，也不能把露营地视为“绝对没有熊”的区域。</p><a href="https://www.visitsvalbard.com/informasjon-for-besokende/news/isbjornhendelse-28-august-2020" target="_blank">Visit Svalbard 事件说明 ↗</a></article>
+    <article class="incident"><time>2022.08.08</time><h3>Sveasletta 营地袭击</h3><p>Isfjorden 北岸一处 25 人营地遭熊进入，一名法国游客手臂受伤，后熊被处置。说明“团队 + 营地”也仍需要持续熊防与警戒。</p><a href="https://www.svalbardposten.no/isbjorn-sysselmesteren/kvinne-skadet-av-isbjorn-na-er-den-avlivet/489512" target="_blank">Svalbardposten 报道 ↗</a></article>
+    <article class="incident"><time>2026.05–08</time><h3>野生动物疾病新变量</h3><p>斯瓦尔巴先后在北极熊、海象中确认 H5N5；8 月又确认第二头感染北极熊。对游客的实际规则很简单：不碰病弱/死亡动物，发现异常就报告。</p><a href="https://prod.sysselmesteren.no/en/news/2026/08/bird-flu-detected-in-yet-another-polar-bear/" target="_blank">Governor · 2026.08.25 ↗</a></article>
+  </div>
+</section>
+
+<section class="section" id="sources">
+  <div class="section-head"><div><p class="eyebrow">FAST LINKS / REFERENCES</p><h2>快速跳转数据源</h2></div><p>优先官方、准官方和科研机构；手机端建议全部收藏到同一文件夹。标注“背景”的链接不用于现场 Go / No-Go。</p></div>
+  <div class="refs">
+    <div class="ref"><b>NOAA CPC · ENSO Diagnostic Discussion</b><span>月度大尺度背景；2026-09-10 仍为 El Niño Advisory，Niño-3.4 为 +1.8°C。不可替代局地预报。</span><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.html" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Copernicus Marine · Svalbard Sea Ice 1 km</b><span>斯瓦尔巴日更海冰浓度图，区域尺度趋势。</span><a href="https://data.marine.copernicus.eu/product/SEAICE_ARC_SEAICE_L4_NRT_OBSERVATIONS_011_002/description" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Copernicus Marine · Arctic SST / Ice Surface Temperature</b><span>卫星日更北极海表/冰表温度，0.05° 网格。</span><a href="https://data.marine.copernicus.eu/product/SEAICE_ARC_PHY_SST-IST_L3S_NRT_011_022/description" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET Norway · Weather & Climate</b><span>官方天气、警报、历史数据入口。</span><a href="https://www.met.no/en/weather-and-climate" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET Alerts API · Longyearbyen</b><span>Longyearbyen 点位当前有效官方天气警报；9/22 核查时返回 0 条事件。</span><a href="https://api.met.no/weatherapi/metalerts/2.0/current.json?lat=78.2232&amp;lon=15.6469" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET Locationforecast API · Longyearbyen</b><span>逐小时气温、风、降水和天气符号；越远期不确定性越高。</span><a href="https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=78.2232&amp;lon=15.6469" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Yr · Longyearbyen</b><span>临行前 7 天与现场每天最常用的点位天气入口。</span><a href="https://www.yr.no/en/forecast/daily-table/2-2729907/Norway/Svalbard/Longyearbyen" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET · Sea and High North</b><span>海冰图、海况、波浪与高北区数据入口。</span><a href="https://www.met.no/en/Sea-and-High-North-areas" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET Oceanforecast · Isfjorden 单点</b><span>78.3°N, 15.5°E 的波浪、海温与流速模型；只作趋势参考，不代表完整航线。</span><a href="https://api.met.no/weatherapi/oceanforecast/2.0/complete?lat=78.3&amp;lon=15.5" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Varsom · Nordenskiöld Land</b><span>雪崩区域页；注意你们旅行季节通常为未评估状态。</span><a href="https://www.varsom.no/en/snow/forecast/warning/Nordenski%C3%B6ld%20Land/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Varsom / Regobs</b><span>现场雪、天气、滑坡、水文观测与离线地图。</span><a href="https://www.varsom.no/en/about/regobs/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Governor of Svalbard · News</b><span>野生动物事件、临时规定、旅行安全公告。</span><a href="https://www.sysselmesteren.no/en/news/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Governor of Svalbard · News RSS</b><span>用于快速按时间核对最新条目；9/22 未见新的熊情封线或旅行限制。</span><a href="https://www.sysselmesteren.no/en/news/rss" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Governor · Travel in Svalbard</b><span>2026 起旅行/登记及组织活动责任规则。</span><a href="https://www.sysselmesteren.no/en/travel-in-svalbard/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Governor · Safety in Svalbard</b><span>官方高北安全手册，含北极熊与野外行动。</span><a href="https://www.sysselmesteren.no/en/publications/booklets-and-publications/safety-in-svalbard/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>Norwegian Polar Institute · Polar Bear</b><span>北极熊生态、海冰依赖与行为背景。</span><a href="https://npolar.no/en/species/polar-bear/" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>NPI · Traffic and Wildlife</b><span>远距离观察、避免干扰和遭遇时的原则。</span><a href="https://cruise-handbook.npolar.no/en/svalbard/traffic-and-wildlife.html" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET · 2026-06 record warmth on Svalbard</b><span>2026 年暖背景的官方记录。</span><a href="https://www.met.no/nyhetsarkiv/juni-var-varm-pa-fastlandet-og-rekordvarm-pa-svalbard" target="_blank">打开 ↗</a></div>
+    <div class="ref"><b>MET · 2026 permafrost / tundra changes</b><span>Adventdalen 冻土融化、地表滑塌与裂缝观察。</span><a href="https://www.met.no/nyhetsarkiv/-det-er-nesten-sa-jeg-ikke-klarer-a-tro-pa-det-jeg-ser" target="_blank">打开 ↗</a></div>
+  </div>
+</section>
+
+<footer><b>78°</b><div><strong>北纬 78° · ARCTIC FIELD LOG</strong><p>环境监控模块版本：2026.09.22 · 只作为行程决策辅助，不替代官方警报、向导、船长或总督指令。</p></div><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到顶部 ↑</a></footer>
+
+<script>
+(function(){
+  var trip=new Date('2026-09-25T00:00:00+02:00');
+  var now=new Date();
+  var days=Math.ceil((trip-now)/(1000*60*60*24));
+  document.getElementById('countdown').textContent=days>=0 ? 'T-'+days+' DAYS' : 'ON TRIP';
+  var rows=[].slice.call(document.querySelectorAll('.trow'));
+  var stored=JSON.parse(localStorage.getItem('arctic-env-timeline')||'{}');
+  var next=null;
+  rows.forEach(function(row){
+    var d=row.getAttribute('data-date');
+    var btn=row.querySelector('button');
+    if(stored[d]) row.classList.add('done');
+    if(!next && new Date(d+'T23:59:59+02:00')>=now) next=row;
+    btn.addEventListener('click',function(){
+      stored[d]=!stored[d];
+      localStorage.setItem('arctic-env-timeline',JSON.stringify(stored));
+      row.classList.toggle('done',!!stored[d]);
+      btn.textContent=stored[d]?'已完成 · 撤销':'标记完成';
+    });
+    btn.textContent=stored[d]?'已完成 · 撤销':'标记完成';
+  });
+  if(next){next.classList.add('next');document.getElementById('nextcheck').textContent='下一节点：'+next.querySelector('time').textContent+' · '+next.querySelector('h3').textContent;}
+  else document.getElementById('nextcheck').textContent='行程节点已全部经过';
+  var checks=[].slice.call(document.querySelectorAll('input[type=checkbox][data-k]'));
+  var cstore=JSON.parse(localStorage.getItem('arctic-env-checks')||'{}');
+  function refresh(){var n=0;checks.forEach(function(c){c.checked=!!cstore[c.dataset.k];if(c.checked)n++;});document.getElementById('checkState').textContent=n+' / '+checks.length+' 项已确认';}
+  checks.forEach(function(c){c.addEventListener('change',function(){cstore[c.dataset.k]=c.checked;localStorage.setItem('arctic-env-checks',JSON.stringify(cstore));refresh();});});
+  document.getElementById('resetChecks').addEventListener('click',function(){cstore={};localStorage.removeItem('arctic-env-checks');refresh();});
+  refresh();
+})();
+</script>
+</body>
+</html>
