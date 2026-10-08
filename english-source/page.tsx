@@ -1,5 +1,5 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Language switching reloads the document to restore the root page language. */
+/* eslint-disable @next/next/no-html-link-for-pages -- Language switching reloads the document to restore the page language. */
 
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 
@@ -239,7 +239,7 @@ export default function Home() {
       <header>
         <a href="#top" className="brand"><span className="mountains"><i/><i/></span><b>78° North</b><small>ARCTIC FIELD LOG</small></a>
         <nav><a href="#plan">Itinerary</a><a href="#activities">Activities</a><a href="#book">Bookings</a><a href="#budget">Budget</a><a href="#kit">Kit</a></nav>
-        <div className="header-tools"><a className="language-link" href="/" lang="zh-CN">中文</a><a href="#book" className="status"><i/>{locked}/{bookings.length} Booked</a></div>
+        <div className="header-tools"><a className="language-link" href="/zh" lang="zh-CN">Chinese backup</a><a href="#book" className="status"><i/>{locked}/{bookings.length} Booked</a></div>
       </header>
 
       <section className="hero" id="top">

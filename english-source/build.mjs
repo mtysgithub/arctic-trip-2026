@@ -10,7 +10,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 mkdirSync(resolve(root, 'assets'), { recursive: true });
 mkdirSync(resolve(here, '.cache'), { recursive: true });
-const source = readFileSync(resolve(here, 'page.tsx'), 'utf8').replace('href="/"', 'href="./index.html"');
+const source = readFileSync(resolve(here, 'page.tsx'), 'utf8').replace('href="/zh"', 'href="./zh.html"');
 await build({ stdin: { contents: source, loader: 'tsx', resolveDir: here }, outfile: resolve(here, '.cache/page.cjs'), bundle: true, platform: 'node', format: 'cjs', jsx: 'automatic', external: ['react', 'react/jsx-runtime'] });
 const require = createRequire(import.meta.url);
 const { default: Home } = require('./.cache/page.cjs');
@@ -18,7 +18,9 @@ const rendered = renderToString(React.createElement(Home));
 await build({ stdin: { contents: `import React from 'react'; import { hydrateRoot } from 'react-dom/client'; import Home from './page.tsx'; hydrateRoot(document.getElementById('root'), <Home/>);`, loader: 'tsx', resolveDir: here }, outfile: resolve(root, 'assets/arctic-en.js'), bundle: true, platform: 'browser', format: 'esm', jsx: 'automatic', minify: true, define: { 'process.env.NODE_ENV': '"production"' }, plugins: [{ name: 'relative-language-link', setup(b) { b.onLoad({ filter: /page\.tsx$/ }, () => ({ contents: source, loader: 'tsx' })); } }] });
 const css = readFileSync(resolve(here, 'globals.css'), 'utf8').replace('@import "tailwindcss";', '') + '\n:root{--font-geist-sans:Arial;--font-geist-mono:ui-monospace}\n';
 writeFileSync(resolve(root, 'assets/arctic-en.css'), css);
-writeFileSync(resolve(root, 'en.html'), `<!doctype html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Complete English itinerary for the 2026 Arctic trip: daily plans, activities, bookings, budget and packing list."><title>78° North | Arctic Trip 2026 — English Itinerary</title><link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./assets/arctic-en.css"><script type="module" src="./assets/arctic-en.js"></script></head><body><div id="root">${rendered}</div></body></html>\n`);
+const html = `<!doctype html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Complete English itinerary for the 2026 Arctic trip: daily plans, activities, bookings, budget and packing list."><title>78° North | Arctic Trip 2026 — English Itinerary</title><link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./assets/arctic-en.css"><script type="module" src="./assets/arctic-en.js"></script></head><body><div id="root">${rendered}</div></body></html>\n`;
+writeFileSync(resolve(root, 'index.html'), html);
+writeFileSync(resolve(root, 'en.html'), html);
 
 // Read the same data used by the page to generate a complete, readable itinerary.
 const dataSource = readFileSync(resolve(here, 'page.tsx'), 'utf8').split('function useSaved')[0] + '\nexport { days, activities, bookings, costs, actualCosts, fxSnapshot, kit };';
